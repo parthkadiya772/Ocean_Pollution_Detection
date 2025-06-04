@@ -31,13 +31,41 @@
     cd Ocean_Pollution_Detection
     ```
 
-2. **Install dependencies**
+2. **Requirements**
+    - python == 3.7.10
+    - pytorch == 1.7 
+    - cudatoolkit == 11.0 (For GPU usage, compute capability >= 3.5)
+    - gdal == 2.3.3
+    - rasterio == 1.0.21
+    - scikit-learn == 0.24.2
+    - numpy == 1.20.2
+    - tensorboard == 1.15
+    - torchvision == 0.8.0
+    - scikit-image == 0.18.1
+    - pandas == 1.2.4
+    - pytables == 3.6.1
+    - tqdm == 4.59.0
+    
+    
+    ### Installation Guide
+    
+    The requirements are easily installed via
+    [Anaconda](https://www.anaconda.com/distribution/#download-section) (recommended):
     ```bash
-    pip install -r requirements.txt
+    conda env create -f environment.yml
+    ```
+    > If the following error occurred: InvalidVersionSpecError: Invalid version spec: =2.7 
+    >
+    > Run: conda update conda
+    
+    After the installation is completed, activate the environment:
+    ```bash
+    conda activate marida
     ```
 
 3. **Download the MARIDA dataset and Sentinel-2 imagery**
-    - Ensure you have access to the dataset and place it in the appropriate directory as specified in the code.
+    - In order to train or test the models, download [MARIDA](https://doi.org/10.5281/zenodo.5151941)
+    - Ensure you have access to the dataset and place it in the appropriate directory as specified in the code (For data stucture and follow the project check main project for [Marine Dabris](https://github.com/marine-debris/marine-debris.github.io)).
 
 ## Usage
 
@@ -56,11 +84,6 @@
 
 3. **Real-time detection**
     - Integrate the trained CNN model into your monitoring pipeline for real-time marine debris detection.
-
-## Folder Structure
-
-- `/data`: Contains splits and references for training, validation, and test datasets.
-- `/scripts` or `/src`: Source code for model training, evaluation, and data processing.
 
 ## Contributing
 
