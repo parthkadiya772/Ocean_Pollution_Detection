@@ -69,21 +69,7 @@
 
 ## Usage
 
-1. **Train the model**
-    - Run the training script (replace with actual script name if available):
-        ```bash
-        python train_cnn.py
-        ```
-    - You can also experiment with other algorithms like Random Forest or SGD by running their respective scripts.
-
-2. **Evaluate the model**
-    - Use the evaluation script to assess performance on test data:
-        ```bash
-        python evaluate.py
-        ```
-
-3. **Real-time detection**
-    - Integrate the trained CNN model into your monitoring pipeline for real-time marine debris detection.
+- Run ML_DL_Model_Result_Enhanced.ipynb in VS Code.
 
 ## Contributing
 
